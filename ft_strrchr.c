@@ -6,7 +6,7 @@
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/03 15:01:56 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/06 11:59:08 by dvan-kle      ########   odam.nl         */
+/*   Updated: 2022/10/11 19:09:05 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strrchr(const char *str, int c)
 	}
 	while (i >= 0)
 	{
-		if (str[i] == c)
+		if (str[i] == (char)c)
 		{
 			return (&ptr[i]);
 		}

@@ -6,7 +6,7 @@
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 14:18:58 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/06 13:25:14 by dvan-kle      ########   odam.nl         */
+/*   Updated: 2022/10/11 16:37:23 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void	*ft_memcpy(void *dst, const void *sc, size_t n)
 	dest = (char *)dst;
 	src = (char *)sc;
 	i = 0;
+	if (dst == 0 && sc == 0)
+		return (0);
 	while (i < n)
 	{
 		dest[i] = src[i];

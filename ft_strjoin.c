@@ -6,7 +6,7 @@
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 15:38:35 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/06 15:55:20 by dvan-kle      ########   odam.nl         */
+/*   Updated: 2022/10/11 16:10:09 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	int		j;
 
-	res = (char *)malloc((ft_strlen(s1) + ft_strlen(s2)) * sizeof(char));
-	if (res == NULL)
-		return (NULL);
+	res = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	if (res == 0)
+		return (0);
 	i = 0;
 	j = 0;
 	while (s1[i] != '\0')

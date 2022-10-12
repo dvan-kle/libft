@@ -6,12 +6,11 @@
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/03 15:01:56 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/06 13:38:41 by dvan-kle      ########   odam.nl         */
+/*   Updated: 2022/10/11 19:05:45 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *str, int c)
 {
@@ -20,7 +19,25 @@ char	*ft_strchr(const char *str, int c)
 
 	i = 0;
 	ptr = (char *)str;
-	while (str[i] != '\0')
+	while (ptr[i] != (char)c)
+	{
+		if (ptr[i] == 0)
+			return (NULL);
+		i++;
+	}
+	return (&ptr[i]);
+}
+
+/* char	*ft_strchr(const char *str, int c)
+{
+	int		i;
+	char	*ptr;
+	int		len;
+
+	i = 0;
+	ptr = (char *)str;
+	len = ft_strlen(str);
+	while (i < len)
 	{
 		if (str[i] == c)
 		{
@@ -28,10 +45,10 @@ char	*ft_strchr(const char *str, int c)
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
 
-/*  int main(void)
+int main(void)
 {q
 	char str[] = "abcdefgh";
 	char *ptr = &str;

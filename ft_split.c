@@ -1,38 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_substr.c                                        :+:    :+:            */
+/*   ft_split.c                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/06 15:15:09 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/11 21:08:20 by dvan-kle      ########   odam.nl         */
+/*   Created: 2022/10/12 15:00:44 by dvan-kle      #+#    #+#                 */
+/*   Updated: 2022/10/12 15:02:53 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-char	*ft_substr(char const *str, unsigned int start, size_t len)
+char	**ft_split(char const *str, char c)
 {
-	char			*ret;
-	unsigned int	i;
-	size_t			c;
+	char **ptr;
 
-	ret = (char *)malloc((len + 1) * sizeof(char));
-	if (ret == NULL)
-		return (NULL);
-	i = 0;
-	c = 0;
-	while (str[i] != '\0')
-	{
-		if (i >= start && c < len)
-		{
-			ret[c] = str[i];
-			c++;
-		}
-		i++;
-	}
-	ret[c] = '\0';
-	return (ret);
+	ptr = (char **)malloc(ft_strlen(s) * sizeof(char));
 }

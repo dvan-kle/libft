@@ -6,7 +6,7 @@
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 13:57:44 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/06 15:54:56 by dvan-kle      ########   odam.nl         */
+/*   Updated: 2022/10/11 16:24:50 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *src)
 	int		i;
 	char	*dest;
 
-	dest = (char *)malloc(ft_strlen(src) * sizeof(char));
+	dest = (char *)malloc((ft_strlen(src) + 1) * sizeof(char));
 	if (dest == NULL)
 		return (NULL);
 	i = 0;
