@@ -1,42 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_substr.c                                        :+:    :+:            */
+/*   ft_strmapi.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/06 15:15:09 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/13 17:51:01 by dvan-kle      ########   odam.nl         */
+/*   Created: 2022/10/13 14:56:42 by dvan-kle      #+#    #+#                 */
+/*   Updated: 2022/10/13 15:07:43 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-char	*ft_substr(char const *str, unsigned int start, size_t len)
+char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 {
-	char			*ret;
+	char			*ptr;
 	unsigned int	i;
-	size_t			c;
+	unsigned int	len;
 
-	if ((size_t)start > ft_strlen(str))
-		return (ft_strdup(""));
-	if (len > ft_strlen(str))
-		len = ft_strlen(str);
-	ret = (char *)malloc((len + 1) * sizeof(char));
-	if (ret == NULL)
+	len = ft_strlen(str);
+	ptr = (char *)malloc(len + 1);
+	if (!ptr)
 		return (NULL);
 	i = 0;
-	c = 0;
-	while (str[i] != '\0')
+	while (i < len)
 	{
-		if (i >= start && c < len)
-		{
-			ret[c] = str[i];
-			c++;
-		}
+		ptr[i] = f(i, str[i]);
 		i++;
 	}
-	ret[c] = '\0';
-	return (ret);
+	ptr[i] = '\0';
+	return (ptr);
 }

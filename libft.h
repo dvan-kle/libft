@@ -6,7 +6,7 @@
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 14:29:49 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/12 15:27:06 by dvan-kle      ########   odam.nl         */
+/*   Updated: 2022/10/13 15:35:31 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,9 @@ char	*ft_strnstr(const char *str, const char *find, size_t len);
 char	*ft_strrchr(const char *str, int c);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *str, unsigned int start, size_t len);
+char	*ft_strmapi(char const *str, char (*f)(unsigned int, char));
+void	ft_striteri(char *str, void (*f)(unsigned int, char*));
+char	**ft_split(char const *str, char c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 

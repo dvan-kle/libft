@@ -6,7 +6,7 @@
 #    By: dvan-kle <dvan-kle@student.42.fr>            +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/06 10:52:57 by dvan-kle      #+#    #+#                  #
-#    Updated: 2022/10/12 16:18:39 by dvan-kle      ########   odam.nl          #
+#    Updated: 2022/10/13 15:35:47 by dvan-kle      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ SRC=	ft_mem*.c \
 		ft_calloc.c \
 		ft_sub*.c \
 		ft_put*.c \
-		ft_itoa.c
+		ft_itoa.c \
+		ft_split.c
 OBJ= *.o
 
 all: $(NAME)
