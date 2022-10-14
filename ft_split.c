@@ -6,73 +6,102 @@
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/12 15:00:44 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/13 19:15:41 by dvan-kle      ########   odam.nl         */
+/*   Updated: 2022/10/14 17:32:29 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-char	**ft_split(char const *str, char c)
+int	word_count(const char *str, char c)
 {
-	char	**ptr;
-	int		i;
-	int		x;
-	int		y;
-
-	ptr = (char **)malloc(ft_strlen(str) * sizeof(char) + 1);
-	if (!ptr)
-		return (NULL);
-	i = 0;
-	x = 0;
-	y = -1;
-	while (str[i])
-	{
-		while (str[i] != c)
-		{
-			x = 0;
-			y++;
-			ptr[y][x] = str[i];
-			i++;
-			x++;
-		}
-		ptr[y][x] = '\0';
-		i++;
-	}
-	ptr[y + 1][x] = '\0';
-	return (ptr);
-}
-
-int	malloc_size(const char *str, char c)
-{
-	size_t	i;
-	size_t	count;
+	int	i;
+	int	count;
 
 	i = 0;
 	count = 0;
-	while (str[i])
+	while (str[i] != '\0')
 	{
-		if (str[i] != c)
+		while (str[i] && str[i] == c)
+			i++;
+		if (str[i])
 			count++;
-		i++;
+		while (str[i] && str[i] != c)
+			i++;
 	}
 	return (count);
 }
 
+int	find_len(char const *str, int i, char c)
+{
+	int	len;
+
+	len = 0;
+	while (str[i] != c && str[i])
+	{
+		i++;
+		len++;
+	}
+	return (len);
+}
+
+void	*ft_free(char **ptr)
+{
+	int	i;
+
+	i = 0;
+	while (ptr[i])
+	{
+		free(ptr[i]);
+		i++;
+	}
+	free(ptr);
+	return (NULL);
+}
+
+char	**ft_split(char const *str, char c)
+{
+	char	**ptr;
+	int		i;
+	int		j;
+
+	ptr = (char **)malloc((word_count(str, c) + 1) * sizeof(char *));
+	if (!ptr)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (j < word_count(str, c))
+	{
+		while (str[i] == c)
+			i++;
+		if (str[i] != c && str[i] != '\0')
+		{
+			ptr[j] = ft_substr(str, i, find_len(str, i, c));
+			if (!ptr[j])
+				return (NULL);
+			i += find_len(str, i, c);
+			j++;
+		}
+		i++;
+	}
+	ptr[word_count(str, c)] = 0;
+	return (ptr);
+}
+
 /* int main(void)
 {
-		int i;
+	int i;
 
-		i = 0;
-		const char *string = "      split       this for   me  !       ";
-        // char **expected = ((char*[6]){"split", "this", "for", "me", "!", ((void *)0)});
-		int len = ft_strlen(string);
-		printf("%d", len);
+	i = 0;
+	const char *string = "hello!";
+    // char **expected = ((char*[6]){"split", "this", "
+	printf("%d\n", malloc_size(string, ' '));
+	printf("%d", word_count(string, ' '));
 		
-       char **result = ft_split(string, ' ');
-		while(!result[i])
-		{
-			printf("%s", result[i]);
-			i++;
-		}
+	char **result = ft_split(string, ' ');
+	while(result[i] != 0)
+	{
+		printf("%s\n", result[i]);
+		i++;
+	} 
 } */
