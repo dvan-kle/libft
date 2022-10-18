@@ -6,7 +6,7 @@
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/12 15:00:44 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/18 19:46:13 by dvan-kle      ########   odam.nl         */
+/*   Updated: 2022/10/18 22:20:07 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ char	**ft_split(char const *str, char c)
 	return (ptr);
 }
 
-int main(void)
+/* int main(void)
 {
 	int i;
 
@@ -105,3 +105,4 @@ int main(void)
 		i++;
 	} 
 }
+ */
