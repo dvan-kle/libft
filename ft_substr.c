@@ -6,11 +6,10 @@
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 15:15:09 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/14 17:24:08 by dvan-kle      ########   odam.nl         */
+/*   Updated: 2022/10/18 22:26:28 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_substr(char const *str, unsigned int start, size_t len)

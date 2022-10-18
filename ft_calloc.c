@@ -6,11 +6,10 @@
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 13:49:37 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/10 18:07:04 by dvan-kle      ########   odam.nl         */
+/*   Updated: 2022/10/18 22:22:25 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)

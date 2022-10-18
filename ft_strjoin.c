@@ -6,11 +6,10 @@
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 15:38:35 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/11 16:10:09 by dvan-kle      ########   odam.nl         */
+/*   Updated: 2022/10/18 22:25:07 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

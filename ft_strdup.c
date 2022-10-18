@@ -6,12 +6,11 @@
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 13:57:44 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/11 16:24:50 by dvan-kle      ########   odam.nl         */
+/*   Updated: 2022/10/18 22:24:54 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strdup(const char *src)
 {

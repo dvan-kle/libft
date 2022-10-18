@@ -6,13 +6,11 @@
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/04 13:00:22 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/06 15:02:01 by dvan-kle      ########   odam.nl         */
+/*   Updated: 2022/10/18 22:22:07 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_bzero(void	*b, size_t n)
 {
@@ -28,13 +26,3 @@ void	*ft_bzero(void	*b, size_t n)
 	}
 	return (b);
 }
-
-/* int	main(void)
-{
-	char	arr[] = "timma ze moer";
-	char	arr2[] = "timma ze moe2";
-
-	printf("%s\n", bzero(arr2, 0));
-	printf("%s\n", ft_bzero(arr, 0));
-}
- */

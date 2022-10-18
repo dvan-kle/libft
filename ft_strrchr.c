@@ -6,12 +6,9 @@
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/03 15:01:56 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/11 19:09:05 by dvan-kle      ########   odam.nl         */
+/*   Updated: 2022/10/18 22:26:10 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <string.h>
 
 char	*ft_strrchr(const char *str, int c)
 {
@@ -34,13 +31,3 @@ char	*ft_strrchr(const char *str, int c)
 	}
 	return (0);
 }
-
-/* int main(void)
-{
-	char str[] = "adbcdefgddhjkl";
-	char *ptr = &str;
-
-	printf("%s\n", strrchr(ptr, 100));
-	printf("%s\n", ft_strrchr(ptr, 100));
-	
-} */

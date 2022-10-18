@@ -6,12 +6,11 @@
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/12 15:00:44 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/18 22:20:07 by dvan-kle      ########   odam.nl         */
+/*   Updated: 2022/10/18 22:24:32 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	word_count(const char *str, char c)
 {

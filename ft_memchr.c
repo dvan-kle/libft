@@ -6,11 +6,11 @@
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 17:19:06 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/11 19:11:21 by dvan-kle      ########   odam.nl         */
+/*   Updated: 2022/10/18 22:23:07 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

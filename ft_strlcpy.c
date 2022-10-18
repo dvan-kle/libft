@@ -6,7 +6,7 @@
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 14:45:05 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/11 17:29:05 by dvan-kle      ########   odam.nl         */
+/*   Updated: 2022/10/18 22:25:21 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	dest[i] = '\0';
 	return (ft_strlen(src));
 }
-
-/* int main(void)
-{
-	char dest[] = "";
-	char dest1[] = "";
-	char src[] = "deze kopie";
-
-	printf("%lu\n", strlcpy(dest, src, 1));
-	printf("%lu\n", ft_strlcpy(dest1, src, 1));
-} */

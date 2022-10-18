@@ -6,7 +6,7 @@
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/03 15:01:56 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/13 19:48:03 by dvan-kle      ########   odam.nl         */
+/*   Updated: 2022/10/18 22:24:43 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,33 +27,3 @@ char	*ft_strchr(const char *str, int c)
 	}
 	return (&ptr[i]);
 }
-
-/* char	*ft_strchr(const char *str, int c)
-{
-	int		i;
-	char	*ptr;
-	int		len;
-
-	i = 0;
-	ptr = (char *)str;
-	len = ft_strlen(str);
-	while (i < len)
-	{
-		if (str[i] == c)
-		{
-			return (&ptr[i]);
-		}
-		i++;
-	}
-	return (NULL);
-}
-
-int main(void)
-{q
-	char str[] = "abcdefgh";
-	char *ptr = &str;
-
-	printf("%s\n", strchr(ptr, 104));
-	printf("%s\n", ft_strchr(ptr, 104));
-	
-}  */

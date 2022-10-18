@@ -6,13 +6,11 @@
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/03 14:29:25 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/05 13:32:30 by dvan-kle      ########   odam.nl         */
+/*   Updated: 2022/10/18 22:23:44 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memset(void	*b, int c, size_t n)
 {
@@ -28,12 +26,3 @@ void	*ft_memset(void	*b, int c, size_t n)
 	}
 	return (b);
 }
-
-/* int main(void)
-{
-    char arr[] = "timma ze moer";
-    char arr2[] = "timma ze moe2";
-    
-    printf("%s\n", memset(arr2, '0', 2));
-    printf("%s\n", ft_memset(arr, '0', 2));
-} */

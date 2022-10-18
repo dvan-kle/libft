@@ -6,11 +6,9 @@
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/08/18 15:09:55 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/03 15:25:27 by dvan-kle      ########   odam.nl         */
+/*   Updated: 2022/10/18 22:22:30 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	ft_isalnum(int c);
 
 int	ft_isalnum(int c)
 {

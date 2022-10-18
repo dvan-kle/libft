@@ -6,7 +6,7 @@
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/11 19:44:14 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/13 15:06:44 by dvan-kle      ########   odam.nl         */
+/*   Updated: 2022/10/18 22:22:57 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,8 +82,3 @@ static char	*number(char *ptr, int n, int len)
 	}
 	return (ptr);
 }
-
-/* int main(void)
-{
-	char *res = ft_itoa(-2147483648);
-} */
