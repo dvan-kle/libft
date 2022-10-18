@@ -5,38 +5,33 @@
 #                                                      +:+                     #
 #    By: dvan-kle <dvan-kle@student.42.fr>            +#+                      #
 #                                                    +#+                       #
-#    Created: 2022/10/17 18:02:14 by dvan-kle      #+#    #+#                  #
-#    Updated: 2022/10/17 18:02:28 by dvan-kle      ########   odam.nl          #
+#    Created: 2022/10/06 10:52:57 by dvan-kle      #+#    #+#                  #
+#    Updated: 2022/10/17 18:00:38 by dvan-kle      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-CC=cc
-NAME=libft.a
-CFLAGS=-Wall -Wextra -Werror
-OPTIONS=-c -I.
-SRC=ft_mem*.c ft_str*.c ft_to*.c ft_is*.c ft_atoi.c ft_bzero.c ft_calloc.c \
-ft_substr.c ft_split.c ft_itoa.c ft_put*.c
-OBJ=*.o
-BONUS=ft_lst*.c
+CC= gcc
+NAME= libft.a
+CFLAGS= -Wall -Wextra -Werror
+SRC=	ft_mem*.c ft_str*.c ft_to*.c ft_is*.c ft_atoi.c ft_bzero.c ft_calloc.c ft_sub*.c ft_put*.c ft_itoa.c ft_split.c
+OBJ= $(SRC:.c=.o)
+BONUS= ft_lstnew.c
+BONUS_OBJ= $(BONUS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar -crs $(NAME) $(OBJ)
-
-$(OBJ): $(SRC)
-	$(CC) $(CFLAGS) $(OPTIONS) $(SRC)
+	ar rcs $(NAME) $(OBJ)
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(BONUS_OBJS)
 
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean all	
+re: fclean all
 
-bonus: $(BONUS)
-	$(CC) $(CFLAGS) $(OPTIONS) $(BONUS)
-	ar -crs $(NAME) $(OBJ)
+bonus:	$(OBJ) $(BONUS_OBJ)
+			ar rcs $(NAME) $(OBJ) $(BONUS_OBJS)
 
-.PHONY: clean fclean all re bonus
+.PHONY:	all clean fclean re bonus

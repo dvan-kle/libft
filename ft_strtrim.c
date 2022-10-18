@@ -6,12 +6,12 @@
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/12 12:03:46 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/13 18:11:10 by dvan-kle      ########   odam.nl         */
+/*   Updated: 2022/10/18 19:45:14 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
+#include <string.h> 
 #include <stdio.h>
 
 /* static int	ft_start(char const *str, char const *set);

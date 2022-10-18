@@ -6,7 +6,7 @@
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/12 15:00:44 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/14 17:32:29 by dvan-kle      ########   odam.nl         */
+/*   Updated: 2022/10/18 19:46:13 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ char	**ft_split(char const *str, char c)
 		{
 			ptr[j] = ft_substr(str, i, find_len(str, i, c));
 			if (!ptr[j])
-				return (NULL);
+				return (ft_free(ptr));
 			i += find_len(str, i, c);
 			j++;
 		}
@@ -88,7 +88,7 @@ char	**ft_split(char const *str, char c)
 	return (ptr);
 }
 
-/* int main(void)
+int main(void)
 {
 	int i;
 
@@ -104,4 +104,4 @@ char	**ft_split(char const *str, char c)
 		printf("%s\n", result[i]);
 		i++;
 	} 
-} */
+}
