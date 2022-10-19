@@ -6,11 +6,9 @@
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 13:34:48 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/18 22:22:12 by dvan-kle      ########   odam.nl         */
+/*   Updated: 2022/10/19 12:51:02 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

@@ -6,7 +6,7 @@
 /*   By: dvan-kle <dvan-kle@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/18 21:05:02 by dvan-kle      #+#    #+#                 */
-/*   Updated: 2022/10/18 23:06:44 by dvan-kle      ########   odam.nl         */
+/*   Updated: 2022/10/19 14:40:19 by dvan-kle      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*newlist;
 
 	newlist = 0;
+	if (!f || !del)
+		return (NULL);
 	while (lst)
 	{
 		newblock = ft_lstnew(f(lst->content));
